@@ -45,7 +45,7 @@ namespace DynamicTradeInterface.UserInterface.Columns.ColumnExtraIconTypes
 
 			var genepacks = Find.CurrentMap
 				?.listerBuildings
-				.AllBuildingsColonistOfDef(ThingDefOf.GeneBank)
+				.allBuildingsColonist
 				.SelectNotNull((building) => building.TryGetComp<CompGenepackContainer>()?.ContainedGenepacks)
 				.Flatten()
 				.SelectNotNull((genepack) => genepack.GeneSet?.GenesListForReading);
